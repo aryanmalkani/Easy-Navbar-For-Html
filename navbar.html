@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width",intial-scale="1.0">
+
+        <title>Responsive Website</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">NavBar</div>
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <button class="dark_btn" onclick="darkMode()">Dark Mode</button>
+                </ul>
+            </nav>
+        </header>
+        <script>
+            function darkMode() 
+            {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+
+            lines=document.querySelector(".lines");
+            lines.onclick=function()
+            {
+                nav=document.querySelector(".nav_bar");
+                nav.classList.toggle("active");
+            }
+        </script>
+    </body>
+</html>
